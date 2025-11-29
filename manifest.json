@@ -6,12 +6,11 @@
       "js": [ "content.js" ],
       "matches": [ "https://www.saramin.co.kr/*" , "https://www.jobkorea.co.kr/*"]
    } ],
-   "description": "사람인, 잡코리아 공고에 잡플래닛 기업 점수를 표시합니다.",
+   "description": "사람인/잡코리아 공고에 잡플래닛 기업 점수를 표시하며 동일 회사명은 캐시로 중복 요청을 줄입니다.",
    "host_permissions": [ "https://www.saramin.co.kr/*", "https://www.jobplanet.co.kr/*" , "https://www.jobkorea.co.kr/*"],
    "manifest_version": 3,
    "name": "사람인, 잡코리아 잡플래닛 점수 표시기",
-   "permissions": [  ],
-   "version": "1.0",
+   "version": "1.1",
    "icons": {
     "128": "jp-icon.png"
   }

@@ -10,13 +10,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         const searchUrl =
             `https://www.jobplanet.co.kr/search?query=${encodeURIComponent(message.companyName)}`;
 
-        fetch(searchUrl)
-            .then(res => res.text())
-            .then(html => {
-                sendResponse({ html });   // content.js에 HTML 전달
+        fetch(searchUrl, { credentials: "include" })
+            .then(async (res) => {
+                const html = await res.text();
+                sendResponse({ html, status: res.status });   // content.js에 HTML 전달
             })
             .catch(() => {
-                sendResponse({ html: null });
+                sendResponse({ html: null, status: null });
             });
 
         return true; // 비동기 응답 지속

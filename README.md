@@ -1,100 +1,31 @@
 # jp-company-score
-사람인, 잡코리아에서 회사 검색할때 잡플래닛의 점수도 같이 보여주도록 해주는 플러그인
+사람인(Saramin)·잡코리아(JobKorea) 공고에서 잡플래닛(JobPlanet) 기업 점수를 바로 보여주는 크롬 확장입니다.
 
-# 사람인·잡코리아에 잡플래닛 기업 평점 자동 표시!
+## 주요 기능
+- 사람인/잡코리아 공고에 잡플래닛 평점을 자동 표시, 클릭 시 해당 잡플래닛 페이지로 이동
+- 기업명 정규화: ㈜, (주), 주식회사, 유한회사 등 표기 차이를 제거해 정확히 매칭
+- 요청 최적화: 같은 회사명 요청은 캐시해서 재사용, 진행 중인 요청도 공유해 중복 트래픽 최소화
+- 견고한 파서: 잡플래닛 DOM 변경 시를 대비해 느슨한 선택자와 숫자 추출로 점수 파싱
+- 콘솔 로그: 매칭/점수 실패 시 상태 코드·HTML 샘플을 경고로 남겨 디버깅 용이
 
-취업 준비할 때 여러 사이트를 오가느라 번거로우셨나요?  
-이 확장 프로그램은 **사람인(Saramin)**과 **잡코리아(JobKorea)** 채용 공고에  
-**잡플래닛(JobPlanet) 기업 평점**을 자동으로 표시해 줍니다.
+## 사용 방법
+1) 크롬 확장 프로그램 `개발자 모드`에서 `압축 해제된 확장 프로그램 로드`로 이 폴더를 선택  
+2) 사람인 또는 잡코리아에서 검색/목록 페이지를 열면 기업명 옆에 `JP Score`가 붙습니다. 클릭하면 잡플래닛 검색 결과로 이동합니다.
 
----
+## 주의/제한
+- 잡플래닛에 기업이 없거나 이름이 다르면 `N/A`로 표시됩니다.
+- 잡플래닛에 로그인되어야 검색 페이지가 정상 응답할 수 있습니다(403 등 차단 시 콘솔 로그 확인).
 
-## 🔍 주요 기능
+## 스크린샷
+### 사람인
+![](./img/saramin.png)
 
-### ✅ 사람인 / 잡코리아 공고에서 자동으로 평점 표시
-- 기업명 옆에 잡플래닛의 총평점이 즉시 표시됩니다.  
-- 평점을 클릭하면 바로 잡플래닛 해당 기업 페이지로 이동합니다.
+### 잡코리아
+![](./img/jobkorea.png)
 
-### ✅ ㈜ / (주) / 주식회사 / 유한회사 등 자동 정규화
-- 잡플래닛과 채용 사이트 간의 표기 차이를 자동으로 보정합니다.  
-  - 예: **“㈜삼성전자”**, **“삼성전자(주)”**, **“Samsung Electronics Co., Ltd.”** → 모두 동일 기업으로 인식
+## 개인정보 보호
+- 개인정보 수집/서버 전송/추적 코드 없음
+- 계정·쿠키는 잡플래닛 검색용으로만 사용되며 외부로 전송하지 않음
 
-### ✅ 동적 페이지(AJAX)에서도 자동 작동
-- 추천 / 큐레이션 목록  
-- 스크롤 로딩 / 카테고리 변경  
-- 이 모든 상황에서도 자동 적용됩니다.
-
----
-
-## 🎯 이런 분들에게 추천합니다
-- 사람인/잡코리아 보면서 **기업 평판을 빠르게 확인하고 싶은 분**  
-- 매번 잡플래닛을 따로 검색하는 게 번거로운 분  
-- 지원 기업의 신뢰도를 한 번에 보고 싶은 **취준생 / 이직 준비자**
-
----
-
-## 🔒 개인 정보 보호
-- **개인정보 수집 없음**  
-- **로그인 권한 필요 없음**  
-- **외부 서버로 데이터 전송 없음**  
-- **어떠한 정보도 저장하지 않음**
-
----
-
-## 📌 참고 (중요)
-- 평점은 기업 “이름 매칭 방식”으로 가져옵니다.  
-- 잡플래닛에 없는 회사는 **N/A**로 표시됩니다.
-
----
-
-# 🇺🇸 Web Store Description — English Version
-
-## Instant JobPlanet Ratings on Saramin & JobKorea Job Listings!
-
-Stop switching between multiple job platforms.  
-This extension automatically displays JobPlanet company ratings directly on Saramin and JobKorea listings.
-
----
-
-## 🔍 Key Features
-
-### ✅ Auto-display JobPlanet Ratings
-- Shows the company’s JobPlanet rating next to the company name  
-- Click to instantly open the company’s JobPlanet page
-
-### ✅ Smart Company Name Normalization
-Handles variations such as:
-- ㈜Samsung Electronics  
-- Samsung Electronics (주)  
-- Samsung Electronics Co., Ltd.  
-→ All recognized as the same company  
-
-### ✅ Works on Dynamic / AJAX-based Job Lists
-- Category-based job listings  
-- Infinite scroll pages  
-
----
-
-## 🎯 Ideal For
-- Job seekers wanting quick access to company reviews  
-- Anyone tired of manually searching JobPlanet  
-- Efficient job research and company evaluation  
-
----
-
-## 🔒 Privacy Friendly
-- No personal data collection  
-- No account access required  
-- No external data transmission  
-
----
-
-## 📌 Notes (Important)
-- Ratings are matched based on the company name  
-- Companies not listed on JobPlanet will display **N/A**
-
----
-
-# 참고
-## icon
-> gpt sora 이용해서 제작
+## 아이콘
+- gpt sora 사용 제작

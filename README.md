@@ -1,5 +1,6 @@
 # jp-company-score
-사람인(Saramin)·잡코리아(JobKorea) 공고에서 잡플래닛(JobPlanet) 기업 점수를 바로 보여주는 크롬 확장입니다.
+사람인(Saramin)·잡코리아(JobKorea) 공고에서 잡플래닛(JobPlanet) 기업 점수를 바로 보여주는 크롬 확장입니다. <br>
+[크롬웹스토어](https://chromewebstore.google.com/detail/%EC%82%AC%EB%9E%8C%EC%9D%B8-%EC%9E%A1%EC%BD%94%EB%A6%AC%EC%95%84-%EC%9E%A1%ED%94%8C%EB%9E%98%EB%8B%9B-%EC%A0%90%EC%88%98-%ED%91%9C%EC%8B%9C%EA%B8%B0/mlgidgojdnnbhfjgbegekiaohjoipmnf?hl=ko)
 
 ## 주요 기능
 - 사람인/잡코리아 공고에 잡플래닛 평점을 자동 표시, 클릭 시 해당 잡플래닛 페이지로 이동
